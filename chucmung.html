@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/chucmung.css">
+    <title>Chúc mừng</title>
+</head>
+<body>
+    <div class="app">
+        <div class="container">
+            <div class="container__bongbay-wrap">
+                <img src="./image/bongbay.png" alt="" class="container__bongbay-img">
+            </div>
+            <div class="container__bongbay-wrap">
+                <img src="./image/bongbay.png" alt="" class="container__bongbay-img">
+            </div>
+            <p class="container__text">
+                Ngày một thiên thần nhỏ cất tiếng khóc chào đời.
+            </p>
+            <a hidden href="./showanh.html" id="link">show ảnh</a>
+        </div>
+    </div>
+    <script>
+        const linkEl = document.getElementById('link');
+        let interval;
+        interval = setInterval(() => {
+            linkEl.click();
+            clearInterval(interval);
+        }, 7000);
+    </script>
+</body>
+</html>

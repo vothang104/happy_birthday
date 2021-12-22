@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/showanh.css">
+    <title>show anh</title>
+</head>
+<body>
+    <!--	https://scontent-sin6-4.xx.fbcdn.net/v/t39.30808-1…VPV2iXMd4-DxcA8RMEdJmEa6KmXdgl3nO8g_w&oe=61C903BA-->
+    <div class="app">
+        <div class="container">
+            <img src="./image/banhkem.png" alt="" class="container__img-banhkem">
+            <img src="./image/happybirthday2.png" alt="" class="container__img-happybirthday">
+            <audio loop autoplay  hidden id="audio" src="./audio/audio.mp3"></audio>
+            <a hidden id="link" href="./kethuc.html"></a>
+            <div class="showimg">
+                <div class="showing-wrap">
+                    <img id="img" src="./image/imggiang/img1.jpg" alt="" class="showimg__img">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const link = document.getElementById('link');
+        const img = document.getElementById('img');
+        let interval, count = 2;
+        interval = setInterval(() => {
+            img.setAttribute('src', `./image/imggiang/img${count}.jpg`);
+            count ++;
+            count > 5 ? count = 1 : undefined;
+        }, 1000);
+        setTimeout(() => {
+            link.click();
+            clearInterval(interval);
+        }, 29000);
+    </script>
+</body>
+</html>

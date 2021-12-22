@@ -1,0 +1,61 @@
+.app {
+    width: 100%;
+    height: 100vh;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-image: linear-gradient(to bottom right, rgb(252, 158, 173), rgb(252, 208, 208));
+}
+.container__text {
+    width: 80%;
+    font-size: 1.6rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 50px;
+    word-spacing: 2px;
+    line-height: 25px;
+    transform: scaleY(0);
+    animation: xora 1s linear 1s forwards;
+}
+@keyframes xora {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+.container__bongbay-wrap:first-of-type {
+    position: fixed;
+    z-index: 1;
+    top: 20px;
+    left: 5px;
+    width: 30%;
+    height: 180px;
+}
+.container__bongbay-wrap:last-of-type {
+    position: fixed;
+    z-index: 1;
+    top: 20px;
+    right: 5px;
+    width: 30%;
+    height: 180px;
+}
+.container__bongbay-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    animation: bongbay 1s linear infinite alternate;
+}
+@keyframes bongbay {
+    0% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
